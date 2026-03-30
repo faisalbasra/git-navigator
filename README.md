@@ -61,6 +61,9 @@ Now you can run **`git navigator`** from any project!
 *Focus: Syncing with others and preparing for code review.*
 - **Sync with Main (Rebase):** Safely pull and rebase from the main branch.
 - **Create Feature Branch:** Standardized `feature/` naming convention.
+- **Add New Remote:** Connect to a new repository URL.
+- **Update Remote URL:** Quickly swap the URL of an existing remote.
+- **Remove Remote Connection:** Safely disconnect an old remote.
 - **Cleanup Merged Branches:** Hygiene for your local repository.
 
 ### 🔍 Deep Dive & Recovery
