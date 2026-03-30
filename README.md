@@ -48,6 +48,25 @@ Now you can run **`git navigator`** from any project!
 
 ---
 
+## 🔑 Multi-Account SSH Setup
+
+Git Navigator includes a specialized tool for managing multiple GitHub identities (e.g., Personal vs. Work) on a single machine.
+
+### How to use:
+1. Run `./navigator`
+2. Select **Safety & Hygiene**
+3. Select **SSH & Identity Setup**
+
+This will automate the generation of separate SSH keys and configure your `~/.ssh/config` with proper aliases.
+
+### Manual Configuration:
+If you prefer to run the setup script directly:
+1. **Configure:** Edit the `CONFIGURATION` section in `navigators/safety/setup_github_keys.sh`.
+2. **Execute:** `bash navigators/safety/setup_github_keys.sh`
+3. **Add to GitHub:** Copy the outputted public keys to your [GitHub Settings](https://github.com/settings/keys).
+
+---
+
 ## 📦 Workflow Suites
 
 ### [🛡️ Safety & Hygiene](docs/COMMANDS.md#️-safety--hygiene)
