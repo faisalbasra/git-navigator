@@ -50,7 +50,7 @@ Now you can run **`git navigator`** from any project!
 
 ## 📦 Workflow Suites
 
-### 🛡️ Safety & Hygiene
+### [🛡️ Safety & Hygiene](docs/COMMANDS.md#️-safety--hygiene)
 *Focus: Protecting your local work and fixing common mistakes.*
 - **SSH & Identity Setup:** Automated multi-account GitHub configuration.
 - **Conditional Git Identity (Auto-Email):** Automatically swap work/personal emails.
@@ -63,7 +63,7 @@ Now you can run **`git navigator`** from any project!
 - **Undo Last Commit (Keep Changes):** Soft reset to un-commit without losing work.
 - **Save Work to Stash:** Interactive stashing with descriptive messages.
 
-### 🤝 Team Collaboration
+### [🤝 Team Collaboration](docs/COMMANDS.md#-team-collaboration)
 *Focus: Syncing with others and preparing for code review.*
 - **Sync with Main (Rebase):** Safely pull and rebase from the main branch.
 - **Auto-Squash (Clean PR History):** Combine 'oops' commits into one clean PR.
@@ -75,7 +75,7 @@ Now you can run **`git navigator`** from any project!
 - **Remove Remote Connection:** Safely disconnect an old remote.
 - **Cleanup Merged Branches:** Hygiene for your local repository.
 
-### 🔍 Deep Dive & Recovery
+### [🔍 Deep Dive & Recovery](docs/COMMANDS.md#-deep-dive--recovery)
 *Focus: Power-user tools and emergency firefighting.*
 - **Dangling Blob Recovery (God Mode):** Recover code that was never committed.
 - **Bisect Wizard (Bug Hunter):** Find exactly which commit broke your build.
