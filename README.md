@@ -75,6 +75,9 @@ Now you can run **`git navigator`** from any project!
 
 ### 🔍 Deep Dive & Recovery
 *Focus: Power-user tools and emergency firefighting.*
+- **Bisect Wizard (Bug Hunter):** Find exactly which commit broke your build.
+- **Search Code History:** The 'Pickaxe' search to find deleted functions.
+- **Repo Health Audit:** Identify bloat and large files in your repository.
 - **Emergency Recovery (Reflog):** Find "lost" commits after a bad rebase.
 - **Multi-Task with Worktrees:** Manage multiple branches in separate directories.
 
