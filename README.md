@@ -54,7 +54,8 @@ True stories of high-stakes Git scenarios and how to survive them:
 - **[The Story of the Silent Bug (Bisect)](docs/RUNBOOK_BISECT_STORY.md):** A forensic detective story explaining the "Why" behind the Bisect Wizard.
 - **[The Ghost in the Machine (Recovery)](docs/STORY_DANGLING_BLOB.md):** A high-stakes recovery mission for code that was never committed.
 - **[The Secret Identity (Professionalism)](docs/STORY_CONDITIONAL_IDENTITY.md):** A story of legally separating your work and personal Git identities.
-- **[The Toxic Commit (Security)](docs/STORY_TOXIC_COMMIT.md):** A high-stakes security incident and the surgery required to fix it.
+- **[The Toxic Commit (Security)](docs/STORY_TO_COMMIT.md):** A high-stakes security incident and the surgery required to fix it.
+- **[The Witness Protection Program (Identity)](docs/STORY_WITNESS_PROTECTION.md):** A high-stakes recovery mission for correcting your entire professional identity across Git history.
 
 ---
 
@@ -116,6 +117,7 @@ If you prefer to run the setup script directly:
 
 ### [🔍 Deep Dive & Recovery](docs/COMMANDS.md#-deep-dive--recovery)
 *Focus: Power-user tools and emergency firefighting.*
+- **Historical Identity Rewrite (Witness Protection):** Correct your name and email across every commit.
 - **Dangling Blob Recovery (God Mode):** Recover code that was never committed.
 - **Bisect Wizard (Bug Hunter):** Find exactly which commit broke your build.
 - **Search Code History:** The 'Pickaxe' search to find deleted functions.
