@@ -53,6 +53,10 @@ Now you can run **`git navigator`** from any project!
 ### 🛡️ Safety & Hygiene
 *Focus: Protecting your local work and fixing common mistakes.*
 - **SSH & Identity Setup:** Automated multi-account GitHub configuration.
+- **Nuclear Reset (Clean Slate):** Wipe all local mess and match the server.
+- **Surgical Staging (Hunks):** Interactively select parts of files to commit.
+- **Forget Tracked File:** Stop tracking a file without deleting it.
+- **Clean Untracked Junk:** Quickly delete files and folders not in Git.
 - **Fix Typo in Last Commit:** Safely amend your last commit message.
 - **Undo Last Commit (Keep Changes):** Soft reset to un-commit without losing work.
 - **Save Work to Stash:** Interactive stashing with descriptive messages.
