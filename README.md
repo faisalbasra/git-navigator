@@ -43,8 +43,18 @@ To use Git Navigator in any repository on your machine, add a global Git alias:
    git config --global alias.navigator "!$(pwd)/navigator"
    ```
 
-
 Now you can run **`git navigator`** from any project!
+
+---
+
+## 🎓 Git Master Class Stories
+
+True stories of high-stakes Git scenarios and how to survive them:
+
+- **[The Story of the Silent Bug (Bisect)](docs/RUNBOOK_BISECT_STORY.md):** A forensic detective story explaining the "Why" behind the Bisect Wizard.
+- **[The Ghost in the Machine (Recovery)](docs/STORY_DANGLING_BLOB.md):** A high-stakes recovery mission for code that was never committed.
+- **[The Secret Identity (Professionalism)](docs/STORY_CONDITIONAL_IDENTITY.md):** A story of legally separating your work and personal Git identities.
+- **[The Toxic Commit (Security)](docs/STORY_TOXIC_COMMIT.md):** A high-stakes security incident and the surgery required to fix it.
 
 ---
 
@@ -52,7 +62,6 @@ Now you can run **`git navigator`** from any project!
 
 Step-by-step guides for common, high-value developer workflows:
 
-- **[The Story of the Silent Bug (Bisect)](docs/RUNBOOK_BISECT_STORY.md):** A detective story explaining the "Why" behind the Bisect Wizard.
 - **[Contributing to a Project](docs/RUNBOOK_CONTRIBUTING.md):** A complete guide for forking, branching, and submitting PRs.
 - **[Emergency Hotfix Deployment](docs/RUNBOOK_HOTFIX.md):** A rapid-response workflow for critical production bug fixes.
 - **[Managing Complex PR History](docs/RUNBOOK_SQUASH_REBASE.md):** Advanced techniques for rebasing and cleaning up long-lived branches.
