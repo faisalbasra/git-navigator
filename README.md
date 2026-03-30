@@ -64,6 +64,9 @@ Now you can run **`git navigator`** from any project!
 ### 🤝 Team Collaboration
 *Focus: Syncing with others and preparing for code review.*
 - **Sync with Main (Rebase):** Safely pull and rebase from the main branch.
+- **Auto-Squash (Clean PR History):** Combine 'oops' commits into one clean PR.
+- **Compare Branches (Pre-PR):** Visual diff between your branch and main.
+- **Surgical Cherry-Pick:** Pick a single fix from another branch.
 - **Create Feature Branch:** Standardized `feature/` naming convention.
 - **Add New Remote:** Connect to a new repository URL.
 - **Update Remote URL:** Quickly swap the URL of an existing remote.
