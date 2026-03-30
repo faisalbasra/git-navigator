@@ -52,10 +52,33 @@ Now that you've found the **exact moment** the "crime" was committed, you don't 
 
 ---
 
-## 📖 Using the Wizard in Git Navigator
+## ✅ Verification
 
-Ready to be a Git Detective?
-1. Run `./navigator`
-2. Select **Deep Dive & Recovery**
-3. Select **Bisect Wizard (Bug Hunter)**
-4. Follow the prompts to find your "Smoking Gun."
+Once `git bisect` has pinpointed the "bad" commit, you should manually verify its changes:
+
+### 1. Show the Bad Commit
+```bash
+git show <bad-commit-hash>
+```
+Confirm that the changes in this commit are actually related to the bug.
+
+### 2. Test the Bad Commit Manually
+Checkout the suspected commit and run your tests:
+```bash
+git checkout <bad-commit-hash>
+# Run your test/app
+```
+
+### 3. Exit the Bisect
+Always remember to reset Git back to your original state once you're done!
+```bash
+git bisect reset
+```
+
+### 🛠️ Common Fixes
+
+- **"I made a mistake in one of the steps!"**
+  - Run `git bisect log > my-bisect-log.txt` to see your history.
+  - You can undo steps or restart the bisect with `git bisect reset` and start again.
+- **"I can't tell if this commit is good or bad."**
+  - Use `git bisect skip` to let Git pick another commit in that area.

@@ -38,10 +38,28 @@ You open the latest file in that folder, and there it is. Your 300-line algorith
 
 ---
 
-## 📖 Using the Wizard in Git Navigator
+## ✅ Verification
 
-Never panic. Just recover.
-1. Run `./navigator`
-2. Select **Deep Dive & Recovery**
-3. Select **Dangling Blob Recovery (God Mode)**
-4. Follow the prompts to find your "Ghost in the Machine."
+If you suspect you've lost data that was staged but not committed, you can verify and recover it manually:
+
+### 1. Run the Filesystem Check
+```bash
+git fsck --lost-found
+```
+This command searches for "unreachable" objects and moves them to `.git/lost-found/`.
+
+### 2. Inspect Recovered Blobs
+Check the contents of the recovered files:
+```bash
+ls -l .git/lost-found/other/
+```
+To see the content of a specific blob:
+```bash
+cat .git/lost-found/other/<blob-hash>
+```
+
+### 3. Search for Specific Content
+If you have many dangling blobs, search for a keyword from your lost code:
+```bash
+grep -r "your-unique-code-string" .git/lost-found/other/
+```

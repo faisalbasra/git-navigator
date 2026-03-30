@@ -33,10 +33,29 @@ This guide outlines a safe, rapid-response workflow for deploying critical bug f
   - Select **Team Collaboration**
   - Select **Compare Branches (Pre-PR)**.
 
-## 5. Deploy the Hotfix
-- **Push & Merge:**
-  - `git push origin hotfix/your-hotfix-name`
-- **Clean Up Workspace:**
-  - Run `./navigator`
-  - Select **Team Collaboration**
-  - Select **Cleanup Merged Branches**.
+---
+
+## ✅ Verification
+
+Before considering your hotfix "deployed," follow these verification steps:
+
+### 1. Check Local History
+```bash
+git log -n 3 --oneline
+```
+Ensure your new commit has a clear, professional message.
+
+### 2. Compare Branches
+Run the Navigator and select **Compare Branches** to see exactly what you're merging:
+```bash
+./navigator
+# Select Team Collaboration -> Compare Branches (Pre-PR)
+```
+
+### 3. Verify Remote Status
+Ensure your work is safely on the server:
+```bash
+git status
+# Should show "Your branch is up to date with 'origin/hotfix/...'"
+```
+Check your CI/CD pipeline and wait for a passing build.

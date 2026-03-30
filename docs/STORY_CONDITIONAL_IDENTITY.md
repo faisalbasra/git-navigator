@@ -35,10 +35,37 @@ You never have to remember to run `git config user.email` again. Your work stays
 
 ---
 
-## 📖 Using the Wizard in Git Navigator
+## ✅ Verification & Troubleshooting
 
-Be a professional. Automate your identity.
-1. Run `./navigator`
-2. Select **Safety & Hygiene**
-3. Select **Conditional Git Identity (Auto-Email)**
-4. Follow the prompts to set up your work/personal folders.
+After running the wizard, you can verify your configuration and troubleshoot any issues.
+
+### 1. Verify Your Global (Personal) Email
+Run this command from your personal project directory (e.g., outside your work directory):
+```bash
+# Should show your personal email
+git config user.email
+```
+
+### 2. Verify Your Work Email
+Navigate to a directory under your defined work path (e.g., `~/work/`) and check the email there. Since Git needs a repository to apply the `includeIf` logic, you'll need to be inside a Git repo:
+```bash
+cd ~/work/any-repo
+git config user.email
+```
+
+### 3. See the Source of Your Configuration
+To see exactly *where* Git is getting your email address from (which config file), use:
+```bash
+git config --list --show-origin | grep user.email
+```
+*   In your **personal** folders, it should show: `file:/Users/your-user/.gitconfig`
+*   In your **work** folders, it should show: `file:/Users/your-user/.gitconfig-work`
+
+### 🛠️ Common Fixes
+
+- **"My work email isn't showing up!"**
+  - Make sure you are inside a **Git repository**. The `includeIf` logic only triggers when Git can see the repository path.
+  - Check the directory path in your `~/.gitconfig`. It must end with a trailing slash (e.g., `[includeIf "gitdir:~/work/"]`).
+  - Verify that `~/.gitconfig-work` exists and has the correct `[user]` section.
+- **"I want to change my work email/name."**
+  - Simply edit `~/.gitconfig-work` directly. No need to run the wizard again!

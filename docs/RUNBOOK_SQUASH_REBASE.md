@@ -34,8 +34,28 @@ This guide outlines advanced workflows for cleaning up and rebasing long-lived f
   - Select **Team Collaboration**
   - Select **Compare Branches (Pre-PR)**.
 
-## 5. Prepare for Review
-- **Final Cleanup:**
-  - Run `./navigator`
-  - Select **Team Collaboration**
-  - Select **Cleanup Merged Branches**.
+---
+
+## ✅ Verification
+
+After cleaning up your PR history, you must verify that the changes are correct and your history is clean:
+
+### 1. Check Your History
+```bash
+git log --oneline --graph --all -n 5
+```
+Ensure that all of your intermediate commits are squashed into a single, clean commit.
+
+### 2. Compare Against Main
+```bash
+git diff main...HEAD --name-only
+```
+Verify that only the files you intended to change are listed.
+
+### 3. Check Repository Bloat
+If you've removed large files, check the repository size:
+```bash
+./navigator
+# Select Deep Dive & Recovery -> Repo Health Audit
+```
+Verify that the repository history is clean and hasn't grown unnecessarily.

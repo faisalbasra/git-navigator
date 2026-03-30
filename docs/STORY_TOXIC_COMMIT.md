@@ -30,10 +30,32 @@ The repository history is scrubbed clean. The "Toxic Commit" has been surgically
 
 ---
 
-## 📖 Using the Wizard in Git Navigator
+## ✅ Verification
 
-Security is everyone's responsibility. Fix your history.
-1. Run `./navigator`
-2. Select **Safety & Hygiene**
-3. Select **Forget Tracked File** (For individual files)
-4. For deeper history scrubbing, refer to the **Deep Dive & Recovery** documentation.
+After removing a sensitive file from your history, you must verify that it is truly gone from every commit:
+
+### 1. Check Current Directory
+```bash
+ls -a secrets.json
+# Should return "No such file or directory"
+```
+
+### 2. Search All History for the File
+Use `git rev-list` and `grep` to ensure the file doesn't exist in any past commit:
+```bash
+git rev-list --all --objects | grep secrets.json
+# Should return nothing
+```
+
+### 3. Check for Sensitive Content in All Commits
+If you know a specific secret string, search all commits for it:
+```bash
+git grep "YOUR-AWS-SECRET-KEY" $(git rev-list --all)
+# Should return nothing
+```
+
+### 🛠️ Common Fixes
+
+- **"The file still shows up in my search!"**
+  - Make sure you have **pushed** the rewritten history to the server with `git push origin --force --all`.
+  - Your local **Reflog** may still hold references. Run `git reflog expire --expire=now --all && git gc --prune=now --aggressive` to clear it.

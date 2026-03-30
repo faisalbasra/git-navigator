@@ -37,6 +37,29 @@ This guide outlines the standard workflow for contributing code to this (or any)
   - Select **Team Collaboration**
   - Select **Compare Branches (Pre-PR)**.
 
-## 5. Submit Your Work
-- **Push to Fork:** `git push origin feature/your-feature-name`
-- **Open a Pull Request:** Navigate to GitHub and submit your PR!
+---
+
+## ✅ Verification
+
+Before submitting your contribution, follow these final verification steps:
+
+### 1. Check Remote Configuration
+```bash
+git remote -v
+```
+Ensure that `origin` points to your fork and `upstream` points to the original project.
+
+### 2. Verify Branch Status
+```bash
+git status
+# Should show "Your branch is up to date with 'origin/feature/...'"
+```
+Check that your local branch is up to date and clean.
+
+### 3. Review Your Contribution
+Run the Navigator and select **Compare Branches** to see exactly what you're submitting:
+```bash
+./navigator
+# Select Team Collaboration -> Compare Branches (Pre-PR)
+```
+Verify that your changes are correct and follow the project's standards.
