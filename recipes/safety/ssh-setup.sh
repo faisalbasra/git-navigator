@@ -9,5 +9,5 @@ display_recipe "$COMMAND" "$TIP"
 
 if confirm_action; then
     # Call the original script from the project root
-    bash "$(dirname "$0")/../../setup_github_keys.sh"
+    bash "$(dirname "$0")/setup_github_keys.sh"
 fi

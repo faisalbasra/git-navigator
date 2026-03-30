@@ -31,7 +31,19 @@ Git Navigator is an interactive CLI tool designed to help developers navigate Gi
    ./recipe
    ```
 
-3. **Follow the Prompts:** Select a category and a recipe. Review the command and pro-tip, then confirm to execute.
+---
+
+## 🌍 Global Installation
+
+To use Git Navigator in any repository on your machine, add a global Git alias:
+
+1. **Navigate to the cloned folder:** `cd git-recipes`
+2. **Run the alias command:**
+   ```bash
+   git config --global alias.navigator "!$(pwd)/recipe"
+   ```
+
+Now you can run **`git navigator`** from any project!
 
 ---
 
