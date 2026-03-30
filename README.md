@@ -1,34 +1,73 @@
-# Git Navigator Recipes
+# 🧭 Git Navigator
 
-A collection of guided Git & GitHub recipes for various workflows, from basic safety to advanced recovery.
+**The "See-it-then-do-it" Git Companion.**
 
-## Getting Started
+Git Navigator is an interactive CLI tool designed to help developers navigate Git workflows safely and effectively. Instead of memorizing complex flags, you use a guided "Recipe" model where every command is explained before you run it.
 
-The **Git Navigator** is an interactive CLI that guides you through common Git tasks. It explains the commands before you run them, making it ideal for learning and safe operations.
-
-### How to use
-
-1. Clone this repository.
-2. Run the navigator:
-   ```bash
-   ./recipe
-   ```
-3. Select a workflow category:
-   - **Safety & Hygiene**: Fix typos, undo commits, and manage local work safely.
-   - **Team Collaboration**: (Coming Soon) PR preparation and syncing.
-   - **Deep Dive & Recovery**: (Coming Soon) Advanced firefighting tools.
-
-## Recipe Categories
-
-### 🛡️ Safety & Hygiene
-Perfect for protecting your work and fixing common local mistakes.
-- **SSH & Identity Setup**: Automate your multi-account GitHub configuration.
-- **Fix Typo in Last Commit**: Quickly amend your last commit message.
-- **Undo Last Commit (Keep Changes)**: Soft reset to un-commit without losing work.
-- **Save Work to Stash**: Safely store current changes for later.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
 ---
 
-## Contributing
+## 🚀 Why Git Navigator?
 
-To add a new recipe, simply create a new `.sh` file in the relevant category under `recipes/`. Use the template provided in `recipes/safety/undo-commit.sh` as a guide.
+- **Educational:** Every recipe includes a "Pro-Tip" explaining the *why* behind the *how*.
+- **Safe:** Commands are displayed and require confirmation before execution.
+- **Modular:** Categorized by workflow phase (Safety, Collaboration, Advanced).
+- **Zero Dependencies:** Pure Bash. Runs on macOS, Linux, and WSL.
+
+---
+
+## 🛠️ Quick Start
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/git-recipes.git
+   cd git-recipes
+   ```
+
+2. **Run the Navigator:**
+   ```bash
+   ./recipe
+   ```
+
+3. **Follow the Prompts:** Select a category and a recipe. Review the command and pro-tip, then confirm to execute.
+
+---
+
+## 📦 Workflow Suites
+
+### 🛡️ Safety & Hygiene
+*Focus: Protecting your local work and fixing common mistakes.*
+- **SSH & Identity Setup:** Automated multi-account GitHub configuration.
+- **Fix Typo in Last Commit:** Safely amend your last commit message.
+- **Undo Last Commit (Keep Changes):** Soft reset to un-commit without losing work.
+- **Save Work to Stash:** Interactive stashing with descriptive messages.
+
+### 🤝 Team Collaboration
+*Focus: Syncing with others and preparing for code review.*
+- **Sync with Main (Rebase):** Safely pull and rebase from the main branch.
+- **Create Feature Branch:** Standardized `feature/` naming convention.
+- **Cleanup Merged Branches:** Hygiene for your local repository.
+
+### 🔍 Deep Dive & Recovery
+*Focus: Power-user tools and emergency firefighting.*
+- **Emergency Recovery (Reflog):** Find "lost" commits after a bad rebase.
+- **Multi-Task with Worktrees:** Manage multiple branches in separate directories.
+
+---
+
+## 🧪 Contributing
+
+We welcome new recipes! To contribute:
+
+1. Create a new `.sh` file in the appropriate category: `recipes/<category>/<your-recipe>.sh`.
+2. Follow the "Recipe Pattern" (see `recipes/safety/undo-commit.sh` for a template).
+3. Ensure you source `common/utils.sh` for logging and confirmation.
+4. Submit a Pull Request!
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
