@@ -48,6 +48,16 @@ Now you can run **`git navigator`** from any project!
 
 ---
 
+## 📖 Professional Runbooks
+
+Step-by-step guides for common, high-value developer workflows:
+
+- **[Contributing to a Project](docs/RUNBOOK_CONTRIBUTING.md):** A complete guide for forking, branching, and submitting PRs.
+- **[Emergency Hotfix Deployment](docs/RUNBOOK_HOTFIX.md):** A rapid-response workflow for critical production bug fixes.
+- **[Managing Complex PR History](docs/RUNBOOK_SQUASH_REBASE.md):** Advanced techniques for rebasing and cleaning up long-lived branches.
+
+---
+
 ## 🔑 Multi-Account SSH Setup
 
 Git Navigator includes a specialized tool for managing multiple GitHub identities (e.g., Personal vs. Work) on a single machine.
