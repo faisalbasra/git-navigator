@@ -1,0 +1,46 @@
+#!/bin/bash
+source "$(dirname "$0")/recipes/common/utils.sh"
+
+main_menu() {
+    echo "--- Git Navigator ---"
+    PS3="Select a Workflow Phase: "
+    options=("Safety & Hygiene" "Team Collaboration" "Deep Dive & Recovery" "Exit")
+    select opt in "${options[@]}"; do
+        case $opt in
+            "Safety & Hygiene") sub_menu "safety"; break ;;
+            "Team Collaboration") sub_menu "collaborate"; break ;;
+            "Deep Dive & Recovery") sub_menu "advanced"; break ;;
+            "Exit") exit 0 ;;
+            *) log_error "Invalid option $REPLY" ;;
+        esac
+    done
+}
+
+sub_menu() {
+    local category=$1
+    local dir="$(dirname "$0")/recipes/$category"
+    
+    # Check for category existence and ensure it contains .sh files
+    if [ ! -d "$dir" ] || [ -z "$(ls -A "$dir"/*.sh 2>/dev/null)" ]; then
+        log_warn "No recipes found in $category yet."
+        main_menu
+        return
+    fi
+
+    echo "--- $category Recipes ---"
+    # Find all .sh files, remove path and extension
+    recipes=($(ls "$dir"/*.sh | xargs -n 1 basename | sed 's/\.sh//'))
+    
+    PS3="Choose a Recipe (or 'q' to go back): "
+    select r in "${recipes[@]}"; do
+        if [ "$REPLY" == "q" ]; then main_menu; break; fi
+        if [ -n "$r" ]; then
+            bash "$dir/$r.sh"
+            break
+        else
+            log_error "Invalid option $REPLY"
+        fi
+    done
+}
+
+main_menu
