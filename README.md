@@ -52,6 +52,7 @@ Now you can run **`git navigator`** from any project!
 
 Step-by-step guides for common, high-value developer workflows:
 
+- **[The Story of the Silent Bug (Bisect)](docs/RUNBOOK_BISECT_STORY.md):** A detective story explaining the "Why" behind the Bisect Wizard.
 - **[Contributing to a Project](docs/RUNBOOK_CONTRIBUTING.md):** A complete guide for forking, branching, and submitting PRs.
 - **[Emergency Hotfix Deployment](docs/RUNBOOK_HOTFIX.md):** A rapid-response workflow for critical production bug fixes.
 - **[Managing Complex PR History](docs/RUNBOOK_SQUASH_REBASE.md):** Advanced techniques for rebasing and cleaning up long-lived branches.
