@@ -53,6 +53,8 @@ Now you can run **`git navigator`** from any project!
 ### 🛡️ Safety & Hygiene
 *Focus: Protecting your local work and fixing common mistakes.*
 - **SSH & Identity Setup:** Automated multi-account GitHub configuration.
+- **Conditional Git Identity (Auto-Email):** Automatically swap work/personal emails.
+- **Fix Detached HEAD (Safe Re-attach):** Save work from a 'floating' state.
 - **Nuclear Reset (Clean Slate):** Wipe all local mess and match the server.
 - **Surgical Staging (Hunks):** Interactively select parts of files to commit.
 - **Forget Tracked File:** Stop tracking a file without deleting it.
@@ -75,6 +77,7 @@ Now you can run **`git navigator`** from any project!
 
 ### 🔍 Deep Dive & Recovery
 *Focus: Power-user tools and emergency firefighting.*
+- **Dangling Blob Recovery (God Mode):** Recover code that was never committed.
 - **Bisect Wizard (Bug Hunter):** Find exactly which commit broke your build.
 - **Search Code History:** The 'Pickaxe' search to find deleted functions.
 - **Repo Health Audit:** Identify bloat and large files in your repository.
