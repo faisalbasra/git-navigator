@@ -6,11 +6,11 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     exit 1
 fi
 
-RECIPE_NAME="Sync with Main (Rebase)"
+NAVIGATOR_NAME="Sync with Main (Rebase)"
 COMMAND="git fetch origin main && git rebase origin/main"
 TIP="Updates your branch with the latest changes from main. Rebasing keeps history clean and linear."
 
-display_recipe "$COMMAND" "$TIP"
+display_navigator "$COMMAND" "$TIP"
 
 if confirm_action; then
     log_info "Fetching latest main..."

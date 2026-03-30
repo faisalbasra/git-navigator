@@ -5,7 +5,7 @@ This guide explains how to manage multiple GitHub identities (e.g., Personal vs.
 ## 📖 The "Git Navigator" Way
 
 The fastest way to set this up is to run the Git Navigator:
-1. Run `./recipe`
+1. Run `./navigator`
 2. Select **Safety & Hygiene**
 3. Select **SSH & Identity Setup**
 

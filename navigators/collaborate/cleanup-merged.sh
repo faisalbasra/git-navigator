@@ -1,11 +1,11 @@
 #!/bin/bash
 source "$(dirname "$0")/../common/utils.sh"
 
-RECIPE_NAME="Cleanup Merged Branches"
+NAVIGATOR_NAME="Cleanup Merged Branches"
 COMMAND="git remote prune origin && git branch --merged | grep -v \"\*\" | xargs -n 1 git branch -d"
 TIP="Safely deletes local branches that have already been merged into your current branch."
 
-display_recipe "$COMMAND" "$TIP"
+display_navigator "$COMMAND" "$TIP"
 
 if confirm_action; then
     log_info "Pruning remote-tracking branches..."

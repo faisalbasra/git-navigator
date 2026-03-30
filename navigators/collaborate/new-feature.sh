@@ -1,11 +1,11 @@
 #!/bin/bash
 source "$(dirname "$0")/../common/utils.sh"
 
-RECIPE_NAME="Create New Feature Branch"
+NAVIGATOR_NAME="Create New Feature Branch"
 COMMAND="git checkout -b feature/[name]"
 TIP="Creates a new branch using the standard 'feature/' prefix for better organization."
 
-display_recipe "$COMMAND" "$TIP"
+display_navigator "$COMMAND" "$TIP"
 
 if confirm_action; then
     read -p "Enter feature name (e.g., login-fix): " name

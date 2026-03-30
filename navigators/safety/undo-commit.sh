@@ -7,11 +7,11 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     exit 1
 fi
 
-RECIPE_NAME="Undo Last Commit (Keep Changes)"
+NAVIGATOR_NAME="Undo Last Commit (Keep Changes)"
 COMMAND="git reset --soft HEAD~1"
 TIP="Un-commits your last change but keeps all your files modified in the staging area."
 
-display_recipe "$COMMAND" "$TIP"
+display_navigator "$COMMAND" "$TIP"
 
 if confirm_action; then
     git reset --soft HEAD~1

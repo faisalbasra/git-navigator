@@ -21,7 +21,7 @@ confirm_action() {
     return 0
 }
 
-display_recipe() {
+display_navigator() {
     local cmd="$1"
     local tip="$2"
     echo -e "${YELLOW}Command:${NC} $cmd"

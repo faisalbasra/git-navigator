@@ -7,11 +7,11 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     exit 1
 fi
 
-RECIPE_NAME="Save Work to Stash"
+NAVIGATOR_NAME="Save Work to Stash"
 COMMAND="git stash save \"[description]\""
 TIP="Saves your uncommitted changes to a temporary storage, making your worktree clean."
 
-display_recipe "$COMMAND" "$TIP"
+display_navigator "$COMMAND" "$TIP"
 
 if confirm_action; then
     read -p "Enter a description for the stash: " desc

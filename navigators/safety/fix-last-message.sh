@@ -7,11 +7,11 @@ if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     exit 1
 fi
 
-RECIPE_NAME="Fix Typo in Last Commit"
+NAVIGATOR_NAME="Fix Typo in Last Commit"
 COMMAND="git commit --amend -m \"[new message]\""
 TIP="Replaces the last commit with a new message. DO NOT use if you have already pushed!"
 
-display_recipe "$COMMAND" "$TIP"
+display_navigator "$COMMAND" "$TIP"
 
 if confirm_action; then
     # Show current last commit message for context
